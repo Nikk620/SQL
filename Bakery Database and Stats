@@ -1,0 +1,32 @@
+-- Create a business database
+
+CREATE TABLE bakery (Id INTEGER PRIMARY KEY, Item TEXT, Allergens TEXT, Price INTEGER, Quantity INTEGER); 
+
+INSERT INTO bakery VALUES (1,"Blueberry Muffins", "Wheat", 4,12);
+INSERT INTO bakery VALUES (2, "Pumpkin Muffins", "Wheat Soy", 4, 10);
+INSERT INTO bakery VALUES (3, "Cinnamon Scone", "Wheat", 3, 8);
+INSERT INTO bakery VALUES (4, "Cranberry Orange Scone","Wheat", 3, 9);
+INSERT INTO bakery VALUES (5, "Chocolate Crossiant", "Wheat", 4, 6);
+INSERT INTO bakery VALUES (6, "Breakfast Crossiant", "Wheat Soy",6,8);
+INSERT INTO bakery VALUES (7, "Glazed Donut", "Wheat Soy", 4, 14);
+INSERT INTO bakery VALUES (8, "Blueberry Cake Donut", "Wheat Soy", 4, 12);
+INSERT INTO bakery VALUES (9, "Sprinkle Donut", "Wheat Soy", 4, 11);
+INSERT INTO bakery VALUES (10, "Pecan Kringle", "Wheat Soy Nuts",22, 8);
+INSERT INTO bakery VALUES (11, "Cream Cheese Kringle", "Wheat Soy",22, 10);
+INSERT INTO bakery VALUES (12, "Birthday Cake Slice", "Wheat Soy", 5, 8);
+INSERT INTO bakery VALUES (13, "Whole Birthday Cake", "Wheat Soy", 40, 2);
+INSERT INTO bakery VALUES (14, "Chocolate Cupcake", "Wheat Soy", 5, 8);
+INSERT INTO bakery VALUES (15, "Vanilla Cupcake", "Wheat Soy", 5,6);
+
+-- Display items that cost more than 8 dollars
+SELECT * FROM bakery 
+WHERE Price >8 ORDER BY Price;
+
+-- The average price of items
+SELECT AVG (Price) FROM Bakery;
+
+--Total number of items avalable 
+SELECT SUM(quantity) FROM bakery;
+
+--Display all items by price
+SELECT * FROM bakery ORDER BY price;
